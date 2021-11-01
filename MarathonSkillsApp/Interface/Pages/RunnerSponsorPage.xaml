@@ -48,7 +48,7 @@
                 <TextBlock Grid.Row="5" Grid.Column="0" Text="Срок действия:" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource mainText}" Height="23" Margin="0,10" Width="142"></TextBlock>
                 <TextBlock Grid.Row="6" Grid.Column="0" Text="CVC:" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource mainText}" Height="23" Margin="0,10" Width="48"></TextBlock>
 
-                <TextBox x:Name="TbName" Grid.Row="1" Grid.Column="1" Text="45" Style="{DynamicResource textBoxStyle}" TextChanged="TbName_TextChanged"></TextBox>
+                <TextBox x:Name="TbName" Grid.Row="1" Grid.Column="1" Text="45" Style="{StaticResource placeHolder}" Tag="Ваше имя" TextChanged="TbName_TextChanged"></TextBox>
                 <ComboBox Name="CbRunners" Grid.Column="1" Grid.Row="2" Margin="7">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
@@ -66,15 +66,15 @@
 
                     </ComboBox.ItemTemplate>
                 </ComboBox>
-                <TextBox x:Name="TbCard" Grid.Row="3" Grid.Column="1" Text="45" Style="{DynamicResource textBoxStyle}"></TextBox>
-                <TextBox x:Name="TbNumberCard" Grid.Row="4" Grid.Column="1" Text="4555486479822892" Style="{DynamicResource textBoxStyle}" MaxLength="16" MaxLines="1"></TextBox>
+                <TextBox x:Name="TbCard" Grid.Row="3" Grid.Column="1" Text="45" Style="{StaticResource placeHolder}" Tag="Владелец карты"></TextBox>
+                <TextBox x:Name="TbNumberCard" Grid.Row="4" Grid.Column="1" Text="4555486479822892" Style="{StaticResource placeHolder}" Tag="1234 1234 1234 1234" MaxLength="16" MaxLines="1"></TextBox>
                 <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
-                    <TextBox x:Name="TbAviableMonth" Grid.Row="5" Grid.Column="1" Text="01" Style="{DynamicResource textBoxStyle}"  MaxLines="1" MaxLength="2" Width="30" ></TextBox>
-                    <TextBox x:Name="TbAviableYear" Grid.Row="5" Grid.Column="1" Text="2022" Style="{DynamicResource textBoxStyle}" MaxLength="4"  Width="50"></TextBox>
+                    <TextBox x:Name="TbAviableMonth" Grid.Row="5" Grid.Column="1" Text="01" Style="{StaticResource placeHolder}" Tag="01"  MaxLines="1" MaxLength="2" Width="30" ></TextBox>
+                    <TextBox x:Name="TbAviableYear" Grid.Row="5" Grid.Column="1" Text="2022" Style="{StaticResource placeHolder}" Tag="2022" MaxLength="4"  Width="50"></TextBox>
 
                 </StackPanel>
 
-                <TextBox x:Name="TbCVC" Grid.Row="6" Grid.Column="1" Text="666" Style="{DynamicResource textBoxStyle}" MaxLines="1" MaxLength="3" Width="40" HorizontalAlignment="Left"></TextBox>
+                <TextBox x:Name="TbCVC" Grid.Row="6" Grid.Column="1" Text="666" Style="{StaticResource placeHolder}" Tag="123" MaxLines="1" MaxLength="3" Width="40" HorizontalAlignment="Left"></TextBox>
 
             </Grid>
 
@@ -95,7 +95,7 @@
                 <TextBlock FontSize="80" Grid.Row="2" Text="{Binding ElementName=TbSumma, Path=Text, StringFormat=${0}, TargetNullValue=0}" Style="{DynamicResource Title2}"  Grid.RowSpan="3" FontWeight="Normal" ></TextBlock>
                 <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center">
                     <Button x:Name="BtMinus" Content="-" Padding="0" Width="30" Click="BtMinus_Click"></Button>
-                    <TextBox x:Name="TbSumma" MinWidth="40" Style="{DynamicResource textBoxStyle}" Text="6"></TextBox>
+                    <TextBox x:Name="TbSumma" MinWidth="40" Style="{DynamicResource textBoxStyle}" Text="6" HorizontalContentAlignment="Center"></TextBox>
                     <Button x:Name="BtPlus" Content="+" Padding="0" Width="30" Click="BtPlus_Click"></Button>
                 </StackPanel>
 

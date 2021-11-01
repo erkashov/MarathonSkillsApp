@@ -32,8 +32,8 @@
             <TextBlock Text="Email:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center"  Style="{DynamicResource mainText}"></TextBlock>
             <TextBlock Text="Password:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource mainText}"></TextBlock>
 
-            <TextBox x:Name="TbEmail" Grid.Row="0" Grid.Column="1" Style="{DynamicResource textBoxStyle}" MinWidth="250"></TextBox>
-            <TextBox x:Name="TbPassword" Grid.Row="1" Grid.Column="1" Style="{DynamicResource textBoxStyle}"></TextBox>
+            <TextBox x:Name="TbEmail" Grid.Row="0" Grid.Column="1" Style="{StaticResource placeHolder}" Tag="Login" MinWidth="250"></TextBox>
+            <TextBox x:Name="TbPassword" Grid.Row="1" Grid.Column="1" Style="{StaticResource placeHolder}" Tag="Password"></TextBox>
             <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
                 <Button x:Name="BtLogin" Content="Login"  HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtLogin_Click"></Button>
                 <Button x:Name="BtCancel" Content="Cancel"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="BtCancel_Click"></Button>

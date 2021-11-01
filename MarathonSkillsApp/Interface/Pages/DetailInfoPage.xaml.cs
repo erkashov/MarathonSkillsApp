@@ -21,6 +21,7 @@ namespace MarathonSkillsApp.Interface.Pages
     /// </summary>
     public partial class DetailInfoPage : Page
     {
+        
         public DetailInfoPage()
         {
             InitializeComponent();
