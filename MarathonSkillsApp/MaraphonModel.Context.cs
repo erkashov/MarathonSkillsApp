@@ -25,7 +25,7 @@ namespace MarathonSkillsApp
             if (_context == null) _context = new MarathonEntities();
             return _context;
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
