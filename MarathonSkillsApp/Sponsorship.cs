@@ -18,6 +18,14 @@ namespace MarathonSkillsApp
         public string SponsorName { get; set; }
         public int RegistrationId { get; set; }
         public decimal Amount { get; set; }
+
+        public string GetFullName
+        {
+            get
+            {
+                return $"{Registration.Runner.User.FirstName} {Registration.Runner.User.LastName} ({Registration.Runner.RunnerId}) из {Registration.Runner.Country.CountryName}";
+            }
+        }
     
         public virtual Registration Registration { get; set; }
     }

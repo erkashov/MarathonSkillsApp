@@ -61,7 +61,7 @@
           <Key>
             <PropertyRef Name="PositionId" />
           </Key>
-          <Property Name="PositionId" Type="smallint" Nullable="false" />
+          <Property Name="PositionId" Type="smallint" Nullable="false" StoreGeneratedPattern="None" />
           <Property Name="PositionName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PositionDescription" Type="varchar" MaxLength="100" />
           <Property Name="PayPeriod" Type="varchar" MaxLength="10" Nullable="false" />
@@ -121,7 +121,6 @@
           <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="DateOfBirth" Type="datetime2" Precision="7" />
           <Property Name="CountryCode" Type="nchar" MaxLength="3" Nullable="false" />
-          <Property Name="Photo" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Sponsorship">
           <Key>
@@ -136,7 +135,7 @@
           <Key>
             <PropertyRef Name="StaffId" />
           </Key>
-          <Property Name="StaffId" Type="int" Nullable="false" />
+          <Property Name="StaffId" Type="int" StoreGeneratedPattern="None" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="80" Nullable="false" />
           <Property Name="LastName" Type="varchar" MaxLength="80" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
@@ -631,7 +630,6 @@
           <NavigationProperty Name="Gender1" Relationship="Self.FK__Runner__Gender__2D27B809" FromRole="Runner" ToRole="Gender" />
           <NavigationProperty Name="Registration" Relationship="Self.FK__Registrat__Runne__4316F928" FromRole="Runner" ToRole="Registration" />
           <NavigationProperty Name="User" Relationship="Self.FK__Runner__Email__3D5E1FD2" FromRole="Runner" ToRole="User" />
-          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Sponsorship">
           <Key>
@@ -1129,7 +1127,6 @@
           <EntitySetMapping Name="Runner">
             <EntityTypeMapping TypeName="MarathonModel.Runner">
               <MappingFragment StoreEntitySet="Runner">
-                <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="RunnerId" ColumnName="RunnerId" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />

@@ -11,7 +11,8 @@ namespace MarathonSkillsApp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.IO;
+
     public partial class Charity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,6 +25,14 @@ namespace MarathonSkillsApp
         public string CharityName { get; set; }
         public string CharityDescription { get; set; }
         public string CharityLogo { get; set; }
+
+        public byte[] Logo
+        {
+            get
+            {
+                return File.ReadAllBytes(Path.GetFullPath("../../Resources/" + CharityLogo));
+            }
+        }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registration> Registration { get; set; }

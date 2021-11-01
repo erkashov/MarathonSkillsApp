@@ -11,7 +11,8 @@ namespace MarathonSkillsApp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Runner
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,7 +26,15 @@ namespace MarathonSkillsApp
         public string Gender { get; set; }
         public Nullable<System.DateTime> DateOfBirth { get; set; }
         public string CountryCode { get; set; }
-        public byte[] Photo { get; set; }
+
+        public string CharityName
+        {
+            get
+            {
+                if (Registration.Count == 0) return "Нет информации";
+                return Registration.LastOrDefault().Charity.CharityName;
+            }
+        }
     
         public virtual Country Country { get; set; }
         public virtual Gender Gender1 { get; set; }
