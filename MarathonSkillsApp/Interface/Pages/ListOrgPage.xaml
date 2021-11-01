@@ -1,0 +1,47 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.ListOrgPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListOrgPage">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="61"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Список благотворительных организаций" Style="{DynamicResource Title}" ></TextBlock>
+        <TextBlock Grid.Row="1" Style="{DynamicResource mainText}" Text="Список благотворительных орг......" VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center"  Grid.RowSpan="2"/>
+        <ListView x:Name="LvList" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Ellipse Width="150" Height="150"  Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+                            <Ellipse.Fill>
+                                <ImageBrush Stretch="Fill" ImageSource="{Binding Logo}"/>
+                                
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <TextBlock Margin="10" Text="{Binding CharityName}" Style="{DynamicResource mainText}" FontSize="32" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Margin="10" Text="{Binding CharityDescription}" Style="{DynamicResource mainText}"  Grid.Row="1" Grid.Column="1" TextWrapping="Wrap"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

@@ -1,0 +1,54 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.DetailInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DetailInfoPage">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="ButtonTextBlock">
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontStyle" Value="Italic"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Подробная информация" Style="{DynamicResource Title}"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="275"></ColumnDefinition>
+                <ColumnDefinition Width="275"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" Grid.Row="0" x:Name="MarathonSkills2016" Content="Marathon Skills 2016" FontStyle="Italic" Click="MarathonSkills2016_Click"></Button>
+            <Button Grid.Column="0" Grid.Row="1" x:Name="LastResults" Click="LastResults_Click">
+                <Button.Content>
+                    <TextBlock Text="Предыдущие результаты" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="0" Grid.Row="2" x:Name="BMICalc" Content="BMI калькулятор" FontStyle="Italic" Click="BMICalc_Click"></Button>
+            <Button Grid.Column="1" Grid.Row="0" x:Name="HowLong" Click="HowLong_Click">
+                <Button.Content>
+                    <TextBlock Text="Насколько долгий марафон" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="1" x:Name="ListOrg" Click="ListOrg_Click">
+                <Button.Content>
+                    <TextBlock Text="Список благотворительных организаций" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="2" x:Name="BMRCalc" Content="BMR калькулятор" FontStyle="Italic" Click="BMRCalc_Click"></Button>
+        </Grid>
+    </Grid>
+</Page>

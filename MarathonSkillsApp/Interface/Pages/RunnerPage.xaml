@@ -1,0 +1,93 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.RunnerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RunnerPage">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="TextBlockContacts">
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontSize" Value="21" ></Setter>
+            <Setter Property="Foreground" Value="#FF505050"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Меню бегуна" Style="{DynamicResource Title}"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="275"></ColumnDefinition>
+                <ColumnDefinition Width="275"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" Grid.Row="0" x:Name="BtReg" Click="BtReg_Click">
+                <Button.Content>
+                    <TextBlock Text="Регистрация на марафон" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="0" Grid.Row="1" x:Name="BtEdit" Click="BtEdit_Click">
+                <Button.Content>
+                    <TextBlock Text="Редактирование профиля" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="0" Grid.Row="2" x:Name="BtContacts" Click="BtContacts_Click">
+                <Button.Content>
+                    <TextBlock Text="Контакты" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="0" x:Name="BtResults" Click="BtResults_Click">
+                <Button.Content>
+                    <TextBlock Text="Мои результаты" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="1" x:Name="BtSponcor" Click="BtSponcor_Click">
+                <Button.Content>
+                    <TextBlock Text="Мой спонсор" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+
+            <Popup x:Name="PopupContacts" StaysOpen="False">
+                <Grid Background="#FFEBEBEB" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="400"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75"></RowDefinition>
+                        <RowDefinition  Height="100"></RowDefinition>
+                        <RowDefinition  Height="50"></RowDefinition>
+                        <RowDefinition  Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Контакты" Style="{DynamicResource mainText}" FontSize="24" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Text="Для получения подробной информации пожалуйста свяжитесь с координаторами" Style="{DynamicResource TextBlockContacts}"  Grid.Row="1" Grid.Column="0" > </TextBlock>
+                    <TextBlock Style="{DynamicResource TextBlockContacts}"  Grid.Row="2" Grid.Column="0" >
+                        <Bold>Телефон: </Bold> +55 11 9988 7766
+                    </TextBlock>
+                    <TextBlock Style="{DynamicResource TextBlockContacts}"  Grid.Row="3" Grid.Column="0" >
+                        <Bold>Email: </Bold> coordinators@marathonskills.org
+                    </TextBlock>
+
+                    <TextBlock Text="✕"  Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="Red" FontWeight="Bold" FontSize="30" MouseDown="TextBlock_MouseDown"></TextBlock>
+
+                </Grid>
+            </Popup>
+
+        </Grid>
+    </Grid>
+</Page>

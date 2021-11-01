@@ -1,0 +1,35 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.CoordinatorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CoordinatorPage">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Меню координатора" Style="{DynamicResource Title}"></TextBlock>
+        <Grid Grid.Row="1"  Height="100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="275"></ColumnDefinition>
+                <ColumnDefinition Width="275"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Grid.Row="0" x:Name="BtRunners" Click="BtRunners_Click" >
+                <Button.Content>
+                    <TextBlock Text="Бегуны" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="0" x:Name="BtSponcors" Click="BtSponcors_Click">
+                <Button.Content>
+                    <TextBlock Text="Спонсоры" Style="{DynamicResource ButtonTextBlock}"></TextBlock>
+                </Button.Content>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
