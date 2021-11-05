@@ -35,5 +35,21 @@ namespace MarathonSkillsApp.Clases
 
             return $"{time.Days} {days} {time.Hours} {hours} и {time.Minutes} {minutes} до старта марафона!";
         }
+        /// <summary>
+        /// Определяет возратсную категорию бегуна
+        /// </summary>
+        /// <param name="DateOfBirth">дата рождения</param>
+        /// <param name="CalcTime">дата, относительно которой надо вычитать категорию</param>
+        /// <returns></returns>
+        public static string GetCategory(DateTime DateOfBirth, DateTime CalcTime)
+        {
+            TimeSpan delta = CalcTime - DateOfBirth;
+            if (delta < (CalcTime - new DateTime(CalcTime.Year - 18, CalcTime.Month, CalcTime.Day))) return "до 18";
+            if (delta < (CalcTime - new DateTime(CalcTime.Year - 30, CalcTime.Month, CalcTime.Day))) return "18-29";
+            if (delta < (CalcTime - new DateTime(CalcTime.Year - 40, CalcTime.Month, CalcTime.Day))) return "30-39";
+            if (delta < (CalcTime - new DateTime(CalcTime.Year - 56, CalcTime.Month, CalcTime.Day))) return "40-55";
+            if (delta < (CalcTime - new DateTime(CalcTime.Year - 70, CalcTime.Month, CalcTime.Day))) return "56-70";
+            else return "более 70";
+        }
     }
 }

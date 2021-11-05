@@ -49,5 +49,6 @@ namespace MarathonSkillsApp
         public virtual DbSet<Timesheet> Timesheet { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Volunteer> Volunteer { get; set; }
+        public virtual DbSet<StockInventar> StockInventar { get; set; }
     }
 }

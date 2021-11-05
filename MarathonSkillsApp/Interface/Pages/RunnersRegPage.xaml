@@ -1,0 +1,118 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.RunnersRegPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RunnersRegPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Регистрация бегуна" Style="{DynamicResource Title}"></TextBlock>
+        <TextBlock Grid.Row="1" Text="Пожалуйста заполните всю информацию, чтобы зарегистрироваться в качестве бегуна" Style="{DynamicResource mainText}" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="190"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Email:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,11,7,11" Height="23" Width="56"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Пароль:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,11,7,11" Height="23" Width="75"></TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Повторите пароль:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,11,7,11" Height="23" Width="175"></TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Имя:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,11,7,11" Height="23" Width="45"></TextBlock>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Фамилия:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,11,7,11" Height="23" Width="90"></TextBlock>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Пол:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,11,7,11" Height="23" Width="42"></TextBlock>
+
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="TbEmail" Style="{DynamicResource placeHolder}" Tag="Email"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="TbPassword" Style="{DynamicResource placeHolder}" Tag="Пароль"></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="TbConfirmPassword" Style="{DynamicResource placeHolder}" Tag="Повторите пароль"></TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1" x:Name="TbName" Style="{DynamicResource placeHolder}" Tag="Имя"></TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1" x:Name="TbFirstName" Style="{DynamicResource placeHolder}" Tag="Фамилия"></TextBox>
+                <ComboBox Grid.Row="5" Grid.Column="1" x:Name="CbGender" Margin="7" VerticalAlignment="Center">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Gender1}" Style="{DynamicResource mainText}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" ></RowDefinition>
+                    <RowDefinition Height="70" ></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="122*" ></RowDefinition>
+                        <RowDefinition Height="60" ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Фото" Grid.Row="0" Grid.Column="1" Style="{DynamicResource mainText}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"></Border>
+                    <Image x:Name="PhotoRunner" Grid.Row="0" Grid.Column="1"/>
+
+                    <StackPanel Grid.Row="1">
+                        <TextBlock  Text="Фото файл:" Style="{DynamicResource mainText}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+                        <TextBox x:Name="TbImagePath" Style="{DynamicResource placeHolder}" Tag="Photo_logo.png"></TextBox>
+                    </StackPanel>
+                    <Button x:Name="BtOpenPhoto" Content="Просмотр..." Grid.Column="1" Grid.Row="1" Padding="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="BtOpenPhoto_Click" Width="150" Height="30" > </Button>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition ></RowDefinition>
+                        <RowDefinition ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Дата рождения:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center"  ></TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Страна:" Style="{DynamicResource mainText}" HorizontalAlignment="Right" VerticalAlignment="Center"  ></TextBlock>
+
+                    <DatePicker x:Name="DpBirth"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></DatePicker>
+                    <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CbCountry" Margin="7">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CountryName}" Style="{DynamicResource mainText}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+
+                </Grid>
+            </Grid>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+            <Button x:Name="BtReg" Content="Регистрация" Padding="0" Width="150" Click="BtReg_Click"></Button>
+            <Button x:Name="BtCancel" Content="Отмена" Padding="0" Width="150" Click="BtCancel_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

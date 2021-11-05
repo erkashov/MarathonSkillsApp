@@ -1,5 +1,4 @@
-﻿using MarathonSkillsApp.Clases;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,23 +16,13 @@ using System.Windows.Shapes;
 namespace MarathonSkillsApp.Interface.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CheckRunners.xaml
+    /// Логика взаимодействия для Marathon2016Info.xaml
     /// </summary>
-    public partial class CheckRunners : Page
+    public partial class Marathon2016Info : Page
     {
-        public CheckRunners()
+        public Marathon2016Info()
         {
             InitializeComponent();
-        }
-
-        private void OldRunner_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.LogicFrame.Navigate(new LoginPage());
-        }
-
-        private void NewRunner_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.LogicFrame.Navigate(new RunnersRegPage());
         }
     }
 }

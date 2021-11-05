@@ -1,0 +1,124 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.RunnersRegOnMarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RunnersRegOnMarPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="68"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Регистрация на марафон" Style="{DynamicResource Title}" ></TextBlock>
+        <TextBlock Text="Пожалуйста заполните всю информацию, чтобы зарегистрироваться на Skills Marathon 2016, проводимом в Москве, Russia. С вами свяжутся после регистрации для уточнения отплаты и другой информации" Style="{DynamicResource mainText}" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="1" />
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Margin="15, 0, 0, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Вид марафона" Style="{DynamicResource Title2}" Grid.Row="0"></TextBlock>
+                    <CheckBox x:Name="CbType42" Grid.Row="1" Checked="Cb_Checked" Unchecked="Cb_Checked">
+                        <TextBlock Text="42км Полный марафон($145)" Style="{DynamicResource mainText}"></TextBlock>
+                    </CheckBox>
+                    <CheckBox x:Name="CbType21" Grid.Row="2" Checked="Cb_Checked" Unchecked="Cb_Checked">
+                        <TextBlock Text="21км Полумарафон($75)" Style="{DynamicResource mainText}"></TextBlock>
+                    </CheckBox>
+                    <CheckBox x:Name="CbType5" Grid.Row="3" Checked="Cb_Checked" Unchecked="Cb_Checked">
+                        <TextBlock Text="21км Полумарафон($20)" Style="{DynamicResource mainText}"></TextBlock>
+                    </CheckBox>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Детали спонсорства" Style="{DynamicResource Title2}" Grid.Column="0" Grid.ColumnSpan="2"></TextBlock>
+                    <TextBlock Text="Взнос: " Style="{DynamicResource mainText}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
+                    <TextBlock Text="Сумма взноса: " Style="{DynamicResource mainText}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
+                    <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CbFond" Margin="7" VerticalAlignment="Center">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CharityName}" Style="{DynamicResource mainText}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBox x:Name="TbSumma" Style="{DynamicResource placeHolder}" Tag="$500" Grid.Column="1" Grid.Row="2" TextChanged="TbSumma_TextChanged" LostFocus="TbSumma_LostFocus"></TextBox>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+                    <Button x:Name="BtReg" Content="Регистрация" Padding="0" Width="150" Click="BtReg_Click"></Button>
+                    <Button x:Name="BtCancel" Content="Отмена" Padding="0" Width="150" Click="BtCancel_Click"></Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" ></RowDefinition>
+                    <RowDefinition Height="120" ></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Варианты комплектов" Style="{DynamicResource Title2}"></TextBlock>
+                    <RadioButton GroupName="RbComplect" x:Name="RbVarA" Grid.Row="1" Checked="Cb_Checked" Unchecked="Cb_Checked">
+                        <TextBlock Style="{DynamicResource mainText}" TextWrapping="Wrap">
+                            <Run Text="Вариант А ($0):" Foreground="Black" FontWeight="Bold"></Run>
+                            Номер бегуна + RFID браслет
+                        </TextBlock>
+                    </RadioButton>
+                    <RadioButton GroupName="RbComplect" x:Name="RbVarB" Grid.Row="2" Checked="Cb_Checked" Unchecked="Cb_Checked">
+                        <TextBlock Style="{DynamicResource mainText}" TextWrapping="Wrap">
+                            <Run Text="Вариант В ($20):" Foreground="Black" FontWeight="Bold"></Run>
+                            Вариант А + бейсболка + бутылка воды
+                        </TextBlock>
+                    </RadioButton>
+                    <RadioButton GroupName="RbComplect" x:Name="RbVarC" Grid.Row="3" Checked="Cb_Checked" Unchecked="Cb_Checked">
+                        <TextBlock Style="{DynamicResource mainText}" TextWrapping="Wrap">
+                            <Run Text="Вариант С ($25):" Foreground="Black" FontWeight="Bold"></Run>
+                            Вариант В + футболка + сувенирный буклет
+                        </TextBlock>
+                    </RadioButton>
+                </Grid>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <TextBlock Style="{DynamicResource Title2}" TextAlignment="Center">
+                    <Run Text="Регистрационный взнос"></Run>
+                </TextBlock>
+                    <TextBlock Style="{DynamicResource Title2}" x:Name="TbRegVznos" TextAlignment="Center" Text="$0"  FontSize="45" FontWeight="Normal">
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Page>

@@ -54,6 +54,9 @@
             <Setter Property="FontFamily" Value="Arial"></Setter>
             <Setter Property="FontSize" Value="20" ></Setter>
             <Setter Property="Foreground" Value="#FF505050"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
         </Style>
 
         <Style TargetType="TextBox" x:Key="textBoxStyle">
@@ -80,9 +83,11 @@
                                 <TextBox.Style>
                                     <Style TargetType="{x:Type TextBox}">
                                         <Setter Property="Foreground" Value="Transparent"/>
+                                        <Setter Property="FontStyle" Value="Normal"></Setter>
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
                                                 <Setter Property="Foreground" Value="LightGray"/>
+                                                <Setter Property="FontStyle" Value="Italic"></Setter>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -97,7 +102,25 @@
             <Setter Property="Foreground" Value="#FF505050"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="Margin" Value="7"></Setter>
-            <Setter Property="FontStyle" Value="Italic"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
         </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontSize" Value="20" ></Setter>
+            <Setter Property="Foreground" Value="#FF505050"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TBColumnStyle">
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontSize" Value="20" ></Setter>
+            <Setter Property="Foreground" Value="#FFB4B4B4"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="Margin" Value="10, 0, 0, 0"></Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

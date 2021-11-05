@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarathonSkillsApp.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,19 +38,19 @@ namespace MarathonSkillsApp.Interface.Pages
 
         private void BtReg_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new RunnersRegOnMarPage());
 
         }
 
         private void BtEdit_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new EdirRunnerProfilePage());
 
         }
 
         private void BtResults_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new RunnersRezPage());
 
         }
 

@@ -83,6 +83,16 @@ namespace MarathonSkillsApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banco_banespa {
+            get {
+                object obj = ResourceManager.GetObject("banco_banespa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clara_santos_oliveira_institute_logo {
             get {
                 object obj = ResourceManager.GetObject("clara_santos_oliveira_institute_logo", resourceCulture);
@@ -96,6 +106,16 @@ namespace MarathonSkillsApp.Properties {
         internal static System.Drawing.Bitmap conquer_cancer_brazil {
             get {
                 object obj = ResourceManager.GetObject("conquer_cancer_brazil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cross_icon {
+            get {
+                object obj = ResourceManager.GetObject("cross_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,36 @@ namespace MarathonSkillsApp.Properties {
         internal static System.Drawing.Bitmap human_rights_centre_logo {
             get {
                 object obj = ResourceManager.GetObject("human_rights_centre_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ibirapuera_park_lake {
+            get {
+                object obj = ResourceManager.GetObject("ibirapuera_park_lake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marathon_image {
+            get {
+                object obj = ResourceManager.GetObject("marathon_image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marathon_skills_2016_marathon_map {
+            get {
+                object obj = ResourceManager.GetObject("marathon_skills_2016_marathon_map", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +216,16 @@ namespace MarathonSkillsApp.Properties {
         internal static System.Drawing.Bitmap stay_pumped_logo {
             get {
                 object obj = ResourceManager.GetObject("stay_pumped_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teatro_municipal {
+            get {
+                object obj = ResourceManager.GetObject("teatro_municipal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -124,11 +124,17 @@
   <data name="aves_do_brazil_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aves-do-brazil-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="banco_banespa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banco-banespa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="clara_santos_oliveira_institute_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clara-santos-oliveira-institute-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="conquer_cancer_brazil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\conquer-cancer-brazil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diabetes_brazil_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diabetes-brazil-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +144,15 @@
   </data>
   <data name="human_rights_centre_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\human-rights-centre-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ibirapuera_park_lake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ibirapuera-park-lake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marathon_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marathon-image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marathon_skills_2016_marathon_map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marathon-skills-2016-marathon-map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="oxfam_international_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oxfam-international-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,6 +165,9 @@
   </data>
   <data name="stay_pumped_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stay-pumped-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="teatro_municipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\teatro-municipal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="the_red_cross_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\the-red-cross-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

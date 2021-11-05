@@ -17,23 +17,18 @@ using System.Windows.Shapes;
 namespace MarathonSkillsApp.Interface.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CheckRunners.xaml
+    /// Логика взаимодействия для ConfirmRegOnMarPage.xaml
     /// </summary>
-    public partial class CheckRunners : Page
+    public partial class ConfirmRegOnMarPage : Page
     {
-        public CheckRunners()
+        public ConfirmRegOnMarPage()
         {
             InitializeComponent();
         }
 
-        private void OldRunner_Click(object sender, RoutedEventArgs e)
+        private void BtOk_Click(object sender, RoutedEventArgs e)
         {
-            Manager.LogicFrame.Navigate(new LoginPage());
-        }
-
-        private void NewRunner_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.LogicFrame.Navigate(new RunnersRegPage());
+            Manager.LogicFrame.Navigate(new RunnerPage());
         }
     }
 }
