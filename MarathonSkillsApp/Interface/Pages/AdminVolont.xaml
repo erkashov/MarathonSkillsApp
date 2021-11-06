@@ -1,0 +1,108 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.AdminVolont"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminVolont">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Управление волонтерами" Style="{DynamicResource Title}"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Сортировка и фильтрация" Style="{DynamicResource Title}" FontSize="20" Grid.Column="0" Grid.Row="0"></TextBlock>
+            <TextBlock Text="Загрузка" Style="{DynamicResource Title}" FontSize="20" Grid.Column="1" Grid.Row="0"></TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+                <TextBlock Text="Сортировать по:" Style="{DynamicResource mainText}"></TextBlock>
+                <ComboBox x:Name="CbSort" Width="200" Margin="5" SelectionChanged="CbSort_SelectionChanged">
+                    <ComboBoxItem Content="Фамилии"></ComboBoxItem>
+                    <ComboBoxItem Content="Имени" ></ComboBoxItem>
+                    <ComboBoxItem Content="Стране" ></ComboBoxItem>
+                    <ComboBoxItem Content="Полу" ></ComboBoxItem>                    
+                </ComboBox>
+            </StackPanel>
+            <Button Padding="2" x:Name="BtUpdate" Content="Обновить" Grid.Row="2" Grid.Column="0" Click="BtUpdate_Click" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+            <Button Padding="2" x:Name="BtLoad" Content="Загрузка волонтеров" Grid.Column="1" Grid.Row="1" Click="BtLoad_Click" Margin="0"></Button>
+            
+        </Grid>
+        <TextBlock Grid.Row="2" Style="{DynamicResource mainText}" TextAlignment="Center" HorizontalAlignment="Center" MinWidth="450">
+            <Run Text="Всего волонтеров:" FontWeight="Bold"></Run>
+            <Run x:Name="TbTotalCount"></Run>
+        </TextBlock>
+        <DataGrid  x:Name="DgVol" Grid.Row="3" AutoGenerateColumns="False" Background="#FFB4B4B4" AlternatingRowBackground="#FFD6D6D6" Margin="5" IsReadOnly="False" CanUserAddRows="False" CanUserDeleteRows="False" >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF505054"></Setter>
+                    <Setter Property="Padding" Value="10"></Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                
+                <DataGridTemplateColumn Width="3*">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Фамилия" Style="{DynamicResource Title2}" Foreground="#FF343434" HorizontalAlignment="Left"></TextBlock>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FirstName}" Style="{DynamicResource mainText}" HorizontalAlignment="Left" ></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="3*" >
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Имя" Style="{DynamicResource Title2}" Foreground="#FF343434" HorizontalAlignment="Left"></TextBlock>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock TextWrapping="Wrap" MaxWidth="500" Text="{Binding LastName}" Style="{DynamicResource mainText}" HorizontalAlignment="Left"></TextBlock>
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="2*" >
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Страна" Style="{DynamicResource Title2}" Foreground="#FF343434" HorizontalAlignment="Left"></TextBlock>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock TextWrapping="Wrap" MaxWidth="500" Text="{Binding Country.CountryName}" Style="{DynamicResource mainText}" HorizontalAlignment="Left"></TextBlock>
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="2*" >
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Пол" Style="{DynamicResource Title2}" Foreground="#FF343434" HorizontalAlignment="Left"></TextBlock>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock TextWrapping="Wrap" MaxWidth="500" Text="{Binding Gender.Gender1}" Style="{DynamicResource mainText}" HorizontalAlignment="Left"></TextBlock>
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

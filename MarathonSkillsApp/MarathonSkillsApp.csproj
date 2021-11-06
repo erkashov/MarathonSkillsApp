@@ -106,6 +106,9 @@
     <Compile Include="Interface\Pages\AdminOrg.xaml.cs">
       <DependentUpon>AdminOrg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Pages\AdminVolont.xaml.cs">
+      <DependentUpon>AdminVolont.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Pages\ConfirmRegOnMarPage.xaml.cs">
       <DependentUpon>ConfirmRegOnMarPage.xaml</DependentUpon>
     </Compile>
@@ -221,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\Pages\AdminOrg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\AdminVolont.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

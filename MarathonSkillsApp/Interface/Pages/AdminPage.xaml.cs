@@ -40,7 +40,7 @@ namespace MarathonSkillsApp.Interface.Pages
 
         private void BtVolontours_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new AdminVolont());
 
         }
 
