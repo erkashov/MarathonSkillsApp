@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarathonSkillsApp.Interface"
         mc:Ignorable="d"
-        Title="" Height="500" Width="800" MinHeight="450" MinWidth="570">
+        Title="Marathon Skills" Height="500" Width="800" MinHeight="450" MinWidth="570">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="120"></RowDefinition>
