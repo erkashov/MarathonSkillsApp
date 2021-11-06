@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarathonSkillsApp.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace MarathonSkillsApp.Interface.Pages
         public Marathon2016Info()
         {
             InitializeComponent();
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Manager.LogicFrame.Navigate(new InretactiveMap());
         }
     }
 }

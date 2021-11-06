@@ -32,7 +32,7 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/MarathonSkillsApp;component/Resources/marathon-skills-2016-marathon-map.jpg" Margin="5" Stretch="UniformToFill" ></Image>
+            <Image MouseDown="Image_MouseDown" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/MarathonSkillsApp;component/Resources/marathon-skills-2016-marathon-map.jpg" Margin="5" Stretch="UniformToFill" ></Image>
             <Image Grid.Row="2" Grid.Column="0" Source="/MarathonSkillsApp;component/Resources/banco-banespa.jpg" Stretch="Fill" Margin="5"/>
             <Image Grid.Row="3" Grid.Column="0" Source="/MarathonSkillsApp;component/Resources/ibirapuera-park-lake.jpg" Stretch="UniformToFill" Margin="5"/>
             <Image Grid.Row="2" Grid.Column="1" Source="/MarathonSkillsApp;component/Resources/teatro-municipal.jpg" Stretch="UniformToFill" Margin="5"/>

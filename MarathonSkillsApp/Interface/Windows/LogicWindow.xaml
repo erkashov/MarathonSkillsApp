@@ -27,7 +27,7 @@
 
         <Frame Grid.Row="1" x:Name="LogicFrame" NavigationUIVisibility="Hidden"></Frame>
 
-        <Grid Grid.Row="2" Background="#FF505050">
+        <Grid Grid.Row="2" Background="#FF505050" x:Name="TimerGrid">
             <TextBlock x:Name="timer" Text=" до старта марафона" FontSize="20" Foreground="White" VerticalAlignment="Center"  HorizontalAlignment="Center" TextAlignment="Center"/>
         </Grid>
     </Grid>

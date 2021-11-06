@@ -83,6 +83,7 @@
     <Compile Include="Charity.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Icons.cs" />
     <Compile Include="Clases\LongData.cs" />
     <Compile Include="Clases\Manager.cs" />
     <Compile Include="Clases\MarathonRes.cs" />
@@ -113,6 +114,9 @@
     </Compile>
     <Compile Include="Interface\Pages\HowLongPage.xaml.cs">
       <DependentUpon>HowLongPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\InretactiveMap.xaml.cs">
+      <DependentUpon>InretactiveMap.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Pages\inventarPage.xaml.cs">
       <DependentUpon>inventarPage.xaml</DependentUpon>
@@ -223,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\Pages\HowLongPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\InretactiveMap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -346,6 +354,12 @@
       <DependentUpon>MaraphonModel.edmx</DependentUpon>
       <LastGenOutput>MaraphonModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\map-icon-drinks.png" />
+    <Resource Include="Resources\map-icon-energy-bars.png" />
+    <Resource Include="Resources\map-icon-information.png" />
+    <Resource Include="Resources\map-icon-medical.png" />
+    <Resource Include="Resources\map-icon-start.png" />
+    <Resource Include="Resources\map-icon-toilets.png" />
     <Resource Include="Resources\worm.jpg" />
     <Resource Include="Resources\slug.jpg" />
     <Resource Include="Resources\sloth.jpg" />
