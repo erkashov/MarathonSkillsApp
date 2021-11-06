@@ -46,7 +46,7 @@ namespace MarathonSkillsApp.Interface.Pages
 
         private void BtInventar_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new inventarPage());
 
         }
     }

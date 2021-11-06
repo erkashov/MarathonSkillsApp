@@ -14,6 +14,21 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -68,7 +83,10 @@
     <Compile Include="Charity.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Clases\LongData.cs" />
     <Compile Include="Clases\Manager.cs" />
+    <Compile Include="Clases\MarathonRes.cs" />
+    <Compile Include="Clases\Runner.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
@@ -81,8 +99,35 @@
     <Compile Include="Gender.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Pages\ConfirmRegOnMarPage.xaml.cs">
+      <DependentUpon>ConfirmRegOnMarPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Pages\ConfirmRunnerSponcorPage.xaml.cs">
       <DependentUpon>ConfirmRunnerSponcorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\DeliveryInvPage.xaml.cs">
+      <DependentUpon>DeliveryInvPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\EdirRunnerProfilePage.xaml.cs">
+      <DependentUpon>EdirRunnerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\HowLongPage.xaml.cs">
+      <DependentUpon>HowLongPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\inventarPage.xaml.cs">
+      <DependentUpon>inventarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\Marathon2016Info.xaml.cs">
+      <DependentUpon>Marathon2016Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\RunnersRegOnMarPage.xaml.cs">
+      <DependentUpon>RunnersRegOnMarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\RunnersRegPage.xaml.cs">
+      <DependentUpon>RunnersRegPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\RunnersRezPage.xaml.cs">
+      <DependentUpon>RunnersRezPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Windows\LogicWindow.xaml.cs">
       <DependentUpon>LogicWindow.xaml</DependentUpon>
@@ -149,6 +194,9 @@
     <Compile Include="Staff.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="StockInventar.cs">
+      <DependentUpon>MaraphonModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Timesheet.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
@@ -158,7 +206,43 @@
     <Compile Include="Volunteer.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Page Include="Interface\Pages\ConfirmRegOnMarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\Pages\ConfirmRunnerSponcorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\DeliveryInvPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\EdirRunnerProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\HowLongPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\inventarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\Marathon2016Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\RunnersRegOnMarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\RunnersRegPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\RunnersRezPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -262,6 +346,24 @@
       <DependentUpon>MaraphonModel.edmx</DependentUpon>
       <LastGenOutput>MaraphonModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\worm.jpg" />
+    <Resource Include="Resources\slug.jpg" />
+    <Resource Include="Resources\sloth.jpg" />
+    <Resource Include="Resources\ronaldinho.jpg" />
+    <Resource Include="Resources\pair-of-havaianas.jpg" />
+    <Resource Include="Resources\jaguar.jpg" />
+    <Resource Include="Resources\horse.png" />
+    <Resource Include="Resources\football-field.jpg" />
+    <Resource Include="Resources\f1-car.jpg" />
+    <Resource Include="Resources\capybara.jpg" />
+    <Resource Include="Resources\bus.jpg" />
+    <Resource Include="Resources\airbus-a380.jpg" />
+    <Resource Include="Resources\cross-icon.png" />
+    <Resource Include="Resources\teatro-municipal.jpg" />
+    <Resource Include="Resources\marathon-image.jpg" />
+    <Resource Include="Resources\ibirapuera-park-lake.jpg" />
+    <Resource Include="Resources\banco-banespa.jpg" />
+    <Resource Include="Resources\marathon-skills-2016-marathon-map.jpg" />
     <Resource Include="Resources\wwsm-rescue-logo.png" />
     <Resource Include="Resources\upbeat-logo.png" />
     <Resource Include="Resources\the-red-cross-logo.png" />
@@ -279,6 +381,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

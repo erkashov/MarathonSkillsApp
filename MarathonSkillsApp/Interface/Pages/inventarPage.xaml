@@ -1,0 +1,186 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.inventarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="inventarPage">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="TextBlockContacts">
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontSize" Value="21" ></Setter>
+            <Setter Property="Foreground" Value="#FF009033"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Инвентарь" Style="{DynamicResource Title}"></TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left">
+            <TextBlock Text="Всего зарегистрировано бегунов на марафон: " Style="{DynamicResource mainText}" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="TbQuantityRun" Text="{Binding TotalRunners}" Style="{DynamicResource mainText}" Width="520" ></TextBlock>
+        </StackPanel>
+
+        <Grid Grid.Row="2" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Комплект" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Тип А" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="Тип В" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="Тип С" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="4" Text="Необходимо" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="5" Text="Остаток" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+           
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Выбрало данный вариант" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding TypeA}" Style="{DynamicResource mainText}" HorizontalAlignment="Left" Width="100"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding TypeB}" Style="{DynamicResource mainText}" HorizontalAlignment="Left" Width="100"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding TypeC}" Style="{DynamicResource mainText}" HorizontalAlignment="Left" Width="100"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="4" Text="{Binding Need}" Style="{DynamicResource mainText}" HorizontalAlignment="Left" Width="100"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="5" Text="{Binding TotalStock}" Style="{DynamicResource mainText}" HorizontalAlignment="Left" Width="100"></TextBlock>
+            
+            <TextBlock Text="Состав комплекта" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Номер" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="RFID браслет" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Бейсболка" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Бут. Воды" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Футболка" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Сув. буклет" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+           
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding TypeA}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding TypeA}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <Image Grid.Row="5" Grid.Column="1" Source="/MarathonSkillsApp;component/Resources/cross-icon.png"></Image>
+            <Image Grid.Row="6" Grid.Column="1" Source="/MarathonSkillsApp;component/Resources/cross-icon.png"></Image>
+            <Image Grid.Row="7" Grid.Column="1" Source="/MarathonSkillsApp;component/Resources/cross-icon.png"></Image>
+            <Image Grid.Row="8" Grid.Column="1" Source="/MarathonSkillsApp;component/Resources/cross-icon.png"></Image>
+
+            <TextBlock Grid.Row="3" Grid.Column="2" Text="{Binding TypeB}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding TypeB}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="2" Text="{Binding TypeB}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="2" Text="{Binding TypeB}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <Image Grid.Row="7" Grid.Column="2" Source="/MarathonSkillsApp;component/Resources/cross-icon.png"></Image>
+            <Image Grid.Row="8" Grid.Column="2" Source="/MarathonSkillsApp;component/Resources/cross-icon.png"></Image>
+
+            <TextBlock Grid.Row="3" Grid.Column="3" Text="{Binding TypeC}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="3" Text="{Binding TypeC}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="3" Text="{Binding TypeC}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="3" Text="{Binding TypeC}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="3" Text="{Binding TypeC}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="3" Text="{Binding TypeC}" Style="{DynamicResource mainText}" HorizontalAlignment="Center"></TextBlock>
+
+            <TextBlock Grid.Row="3" Grid.Column="4" Text="{Binding NeedNum}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="4" Text="{Binding NeedId}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="4" Text="{Binding NeedBaseb}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="4" Text="{Binding NeedWater}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="4" Text="{Binding NeedT}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="4" Text="{Binding NeedBuklet}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+
+            <TextBlock Grid.Row="3" Grid.Column="5" Text="{Binding StockNum}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="5" Text="{Binding StockId}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="5" Text="{Binding StockBaseb}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="5" Text="{Binding StockWater}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="5" Text="{Binding StockT}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="5" Text="{Binding StockBuklet}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+
+
+        </Grid>
+
+        <Button x:Name="BtReport" Content="Отчет" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Margin="0" Click="BtReport_Click"></Button>
+        <Button x:Name="BtDel" Content="Поступление" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Margin="0" Click="BtDel_Click"></Button>
+
+        <Popup x:Name="PopupPrint" StaysOpen="False" Placement="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Отчет" Style="{DynamicResource Title}"></TextBlock>
+                <TextBlock Text="✕"  Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="Red" FontWeight="Bold" FontSize="30" MouseDown="TextBlock_MouseDown"></TextBlock>
+
+                <Grid Grid.Row="1" ShowGridLines="True" Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Наименование" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Остаток" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="Необходимо" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="3" Text="Надо заказать" Style="{DynamicResource TBColumnStyle}"></TextBlock>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Номер" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="RFID браслет" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Бейсболка" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Бутылка воды" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Футболка" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Сувенирный буклет" Style="{DynamicResource mainText}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding NeedNum}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding NeedId}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="3" Grid.Column="2" Text="{Binding NeedBaseb}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding NeedWater}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="{Binding NeedT}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="{Binding NeedBuklet}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding StockNum}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding StockId}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding StockBaseb}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding StockWater}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding StockT}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="6" Grid.Column="1" Text="{Binding StockBuklet}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+
+                    <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding OrderNum}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding OrderId}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="3" Grid.Column="3" Text="{Binding OrderBaseb}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="4" Grid.Column="3" Text="{Binding OrderWater}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="5" Grid.Column="3" Text="{Binding OrderT}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Grid.Row="6" Grid.Column="3" Text="{Binding OrderBuklet}" Style="{DynamicResource mainText}" HorizontalAlignment="Center" Width="100"></TextBlock>
+
+                </Grid>
+                
+                    <Button x:Name="BtPrint" Content="Печать" Grid.Row="7" Margin="5" HorizontalAlignment="Left"></Button>
+            </Grid>
+            
+        </Popup>
+    </Grid>
+</Page>

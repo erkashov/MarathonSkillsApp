@@ -61,7 +61,7 @@
                 </Button.Content>
             </Button>
 
-            <Popup x:Name="PopupContacts" StaysOpen="False">
+            <Popup x:Name="PopupContacts" StaysOpen="False" Placement="Center">
                 <Grid Background="#FFEBEBEB" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="400"></ColumnDefinition>

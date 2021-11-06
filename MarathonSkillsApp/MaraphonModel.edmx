@@ -145,6 +145,14 @@
           <Property Name="PositionId" Type="smallint" Nullable="false" />
           <Property Name="Comments" Type="varchar" MaxLength="2000" />
         </EntityType>
+        <EntityType Name="StockInventar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="InvName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stock" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Timesheet">
           <Key>
             <PropertyRef Name="TimesheetId" />
@@ -407,6 +415,7 @@
           <EntitySet Name="Runner" EntityType="Self.Runner" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sponsorship" EntityType="Self.Sponsorship" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StockInventar" EntityType="Self.StockInventar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Timesheet" EntityType="Self.Timesheet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Volunteer" EntityType="Self.Volunteer" Schema="dbo" store:Type="Tables" />
@@ -1000,7 +1009,16 @@
             <End Role="Staff" EntitySet="Staff" />
             <End Role="Timesheet" EntitySet="Timesheet" />
           </AssociationSet>
+          <EntitySet Name="StockInventar" EntityType="MarathonModel.StockInventar" />
         </EntityContainer>
+        <EntityType Name="StockInventar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="InvName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stock" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1192,6 +1210,15 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockInventar">
+            <EntityTypeMapping TypeName="MarathonModel.StockInventar">
+              <MappingFragment StoreEntitySet="StockInventar">
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="InvName" ColumnName="InvName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,0 +1,64 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.RunnersRezPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RunnersRezPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Мои результаты" Style="{DynamicResource Title}" Grid.Row="0"></TextBlock>
+        <TextBlock Grid.Row="1" Style="{DynamicResource mainText}" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center">
+            Это - список всех ваших прошлых результатов гонки для Marathon Skills.<LineBreak></LineBreak> 
+            Общее место сравнивает всех бегунов.<LineBreak></LineBreak> 
+            Место по категории сравнивает бегунов по полу и возрастной категории.
+        </TextBlock>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Пол: " Style="{DynamicResource mainText}" FontWeight="Bold" Foreground="Black" ></TextBlock>
+            <TextBlock x:Name="TbGender" Text="мужской" Style="{DynamicResource mainText}"></TextBlock>
+            <TextBlock Text=" Возрастная категория: " Style="{DynamicResource mainText}" FontWeight="Bold" Foreground="Black"></TextBlock>
+            <TextBlock x:Name="TbAgeCat" Text="18-25" Style="{DynamicResource mainText}"></TextBlock>
+        </StackPanel>
+
+        <DataGrid Grid.Row="3" Background="{x:Null}" FontFamily="Arial" x:Name="DGRes" AutoGenerateColumns="False">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="FontFamily" Value="Arial"></Setter>
+                    <Setter Property="FontSize" Value="20" ></Setter>
+                    <Setter Property="Foreground" Value="#FFB4B4B4"></Setter>
+                    <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                    <Setter Property="Margin" Value="15"></Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                <Setter Property="FontFamily" Value="Arial"></Setter>
+                <Setter Property="FontSize" Value="20" ></Setter>
+                <Setter Property="Foreground" Value="#FF505050"></Setter>
+                <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Марафон" Binding="{Binding Marathon}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дистанция" Binding="{Binding Dist}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Время" Binding="{Binding Time}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Общее место" Binding="{Binding TotalPos}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Место по категории" ></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BtAllRez" Content="Показать все результаты" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BtAllRez_Click"></Button>
+    </Grid>
+</Page>
