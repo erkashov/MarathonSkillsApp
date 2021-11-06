@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarathonSkillsApp.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,67 +25,22 @@ namespace MarathonSkillsApp.Interface.Pages
         {
             InitializeComponent();
             TbTotalCount.Text = MarathonEntities.GetContext().Volunteer.Count().ToString();
-            DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.FirstName).ToList();
             CbSort.SelectedIndex = 0;
         }
 
         private void BtUpdate_Click(object sender, RoutedEventArgs e)
         {
-            switch (CbSort.SelectedIndex)
-            {
-                case 0:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.FirstName).ToList();
-                        break;
-                    }
-                case 1:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.LastName).ToList();
-                        break;
-                    }
-                case 2:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Country.CountryName).ToList();
-                        break;
-                    }
-                case 3:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Gender).ToList();
-                        break;
-                    }
-            }
+            Update();
         }
 
         private void BtLoad_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.LogicFrame.Navigate(new AdminLoadVol());
         }
 
         private void CbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch (CbSort.SelectedIndex)
-            {
-                case 0:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.FirstName).ToList();
-                        break;
-                    }
-                case 1:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.LastName).ToList();
-                        break;
-                    }
-                case 2:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Country.CountryName).ToList();
-                        break;
-                    }
-                case 3:
-                    {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Gender).ToList();
-                        break;
-                    }
-            }
+            Update();
         }
 
         private void Update()
@@ -93,22 +49,22 @@ namespace MarathonSkillsApp.Interface.Pages
             {
                 case 0:
                     {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.FirstName).ToList();
+                        DgVol.ItemsSource = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.FirstName).ToList();
                         break;
                     }
                 case 1:
                     {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.LastName).ToList();
+                        DgVol.ItemsSource = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.LastName).ToList();
                         break;
                     }
                 case 2:
                     {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Country.CountryName).ToList();
+                        DgVol.ItemsSource = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Country.CountryName).ToList();
                         break;
                     }
                 case 3:
                     {
-                        DgVol.DataContext = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Gender).ToList();
+                        DgVol.ItemsSource = MarathonEntities.GetContext().Volunteer.OrderBy(p => p.Gender).ToList();
                         break;
                     }
             }

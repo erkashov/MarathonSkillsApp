@@ -83,10 +83,13 @@
     <Compile Include="Charity.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Charity.cs" />
     <Compile Include="Clases\Icons.cs" />
     <Compile Include="Clases\LongData.cs" />
     <Compile Include="Clases\Manager.cs" />
+    <Compile Include="Clases\MarathonEntities.cs" />
     <Compile Include="Clases\MarathonRes.cs" />
+    <Compile Include="Clases\RegistrationEvent.cs" />
     <Compile Include="Clases\Runner.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
@@ -102,6 +105,9 @@
     </Compile>
     <Compile Include="Interface\Pages\AddOrg.xaml.cs">
       <DependentUpon>AddOrg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\AdminLoadVol.xaml.cs">
+      <DependentUpon>AdminLoadVol.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Pages\AdminOrg.xaml.cs">
       <DependentUpon>AdminOrg.xaml</DependentUpon>
@@ -220,6 +226,10 @@
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
     <Page Include="Interface\Pages\AddOrg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\AdminLoadVol.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

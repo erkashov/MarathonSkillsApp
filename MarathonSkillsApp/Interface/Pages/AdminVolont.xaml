@@ -96,7 +96,7 @@
                     </DataGridTemplateColumn.Header>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" MaxWidth="500" Text="{Binding Gender.Gender1}" Style="{DynamicResource mainText}" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" MaxWidth="500" Text="{Binding Gender}" Style="{DynamicResource mainText}" HorizontalAlignment="Left"></TextBlock>
 
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

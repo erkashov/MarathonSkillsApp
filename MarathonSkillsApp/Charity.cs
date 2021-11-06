@@ -11,8 +11,7 @@ namespace MarathonSkillsApp
 {
     using System;
     using System.Collections.Generic;
-    using System.Windows.Media.Imaging;
-
+    
     public partial class Charity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,22 +24,6 @@ namespace MarathonSkillsApp
         public string CharityName { get; set; }
         public string CharityDescription { get; set; }
         public string CharityLogo { get; set; }
-
-        public BitmapImage ImageSource
-        {
-            get
-            {
-                try
-                {
-                    return new BitmapImage(new Uri($"pack://application:,,,/Resources/{CharityLogo}", UriKind.Absolute));
-                }
-                catch
-                {
-                    return new BitmapImage(new Uri("pack://application:,,,/Resources/photo.png", UriKind.Absolute));
-                }
-                
-            }
-        }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registration> Registration { get; set; }
