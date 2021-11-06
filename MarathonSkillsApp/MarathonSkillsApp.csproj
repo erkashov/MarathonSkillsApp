@@ -83,6 +83,7 @@
     <Compile Include="Charity.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Clases\LongData.cs" />
     <Compile Include="Clases\Manager.cs" />
     <Compile Include="Clases\MarathonRes.cs" />
     <Compile Include="Clases\Runner.cs" />
@@ -109,6 +110,9 @@
     </Compile>
     <Compile Include="Interface\Pages\EdirRunnerProfilePage.xaml.cs">
       <DependentUpon>EdirRunnerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\HowLongPage.xaml.cs">
+      <DependentUpon>HowLongPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Pages\inventarPage.xaml.cs">
       <DependentUpon>inventarPage.xaml</DependentUpon>
@@ -215,6 +219,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\Pages\EdirRunnerProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\HowLongPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -338,6 +346,18 @@
       <DependentUpon>MaraphonModel.edmx</DependentUpon>
       <LastGenOutput>MaraphonModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\worm.jpg" />
+    <Resource Include="Resources\slug.jpg" />
+    <Resource Include="Resources\sloth.jpg" />
+    <Resource Include="Resources\ronaldinho.jpg" />
+    <Resource Include="Resources\pair-of-havaianas.jpg" />
+    <Resource Include="Resources\jaguar.jpg" />
+    <Resource Include="Resources\horse.png" />
+    <Resource Include="Resources\football-field.jpg" />
+    <Resource Include="Resources\f1-car.jpg" />
+    <Resource Include="Resources\capybara.jpg" />
+    <Resource Include="Resources\bus.jpg" />
+    <Resource Include="Resources\airbus-a380.jpg" />
     <Resource Include="Resources\cross-icon.png" />
     <Resource Include="Resources\teatro-municipal.jpg" />
     <Resource Include="Resources\marathon-image.jpg" />

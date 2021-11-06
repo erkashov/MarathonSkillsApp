@@ -52,7 +52,7 @@ namespace MarathonSkillsApp.Interface.Pages
 
         private void HowLong_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new HowLongPage());
 
         }
 

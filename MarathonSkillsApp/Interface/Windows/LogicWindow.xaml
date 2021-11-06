@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarathonSkillsApp.Interface" xmlns:componentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
         mc:Ignorable="d"
-        Title="" Height="600" Width="800" MinHeight="500" MinWidth="600">
+        Title="" Height="700" Width="850" MinHeight="500" MinWidth="600">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="MyBoolToVisibilityConverter" />
     </Window.Resources>
