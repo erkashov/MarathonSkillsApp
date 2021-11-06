@@ -34,13 +34,13 @@ namespace MarathonSkillsApp.Interface.Pages
 
         private void BtOrgs_Click(object sender, RoutedEventArgs e)
         {
-            Manager.LogicFrame.Navigate(new ListOrgPage());
+            Manager.LogicFrame.Navigate(new AdminOrg());
 
         }
 
         private void BtVolontours_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new AdminVolont());
 
         }
 

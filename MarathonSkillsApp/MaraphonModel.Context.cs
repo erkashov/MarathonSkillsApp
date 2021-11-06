@@ -15,17 +15,11 @@ namespace MarathonSkillsApp
     
     public partial class MarathonEntities : DbContext
     {
-        private static MarathonEntities _context;
         public MarathonEntities()
             : base("name=MarathonEntities")
         {
         }
-        public static MarathonEntities GetContext()
-        {
-            if (_context == null) _context = new MarathonEntities();
-            return _context;
-        }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

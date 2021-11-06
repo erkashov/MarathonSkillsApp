@@ -83,9 +83,13 @@
     <Compile Include="Charity.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Charity.cs" />
+    <Compile Include="Clases\Icons.cs" />
     <Compile Include="Clases\LongData.cs" />
     <Compile Include="Clases\Manager.cs" />
+    <Compile Include="Clases\MarathonEntities.cs" />
     <Compile Include="Clases\MarathonRes.cs" />
+    <Compile Include="Clases\RegistrationEvent.cs" />
     <Compile Include="Clases\Runner.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
@@ -98,6 +102,18 @@
     </Compile>
     <Compile Include="Gender.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\AddOrg.xaml.cs">
+      <DependentUpon>AddOrg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\AdminLoadVol.xaml.cs">
+      <DependentUpon>AdminLoadVol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\AdminOrg.xaml.cs">
+      <DependentUpon>AdminOrg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\AdminVolont.xaml.cs">
+      <DependentUpon>AdminVolont.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Pages\ConfirmRegOnMarPage.xaml.cs">
       <DependentUpon>ConfirmRegOnMarPage.xaml</DependentUpon>
@@ -114,6 +130,9 @@
     <Compile Include="Interface\Pages\HowLongPage.xaml.cs">
       <DependentUpon>HowLongPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Pages\InretactiveMap.xaml.cs">
+      <DependentUpon>InretactiveMap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Pages\inventarPage.xaml.cs">
       <DependentUpon>inventarPage.xaml</DependentUpon>
     </Compile>
@@ -128,6 +147,9 @@
     </Compile>
     <Compile Include="Interface\Pages\RunnersRezPage.xaml.cs">
       <DependentUpon>RunnersRezPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Pages\RunnersSponsors.xaml.cs">
+      <DependentUpon>RunnersSponsors.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Windows\LogicWindow.xaml.cs">
       <DependentUpon>LogicWindow.xaml</DependentUpon>
@@ -206,6 +228,22 @@
     <Compile Include="Volunteer.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Page Include="Interface\Pages\AddOrg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\AdminLoadVol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\AdminOrg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\AdminVolont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\Pages\ConfirmRegOnMarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -226,6 +264,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Interface\Pages\InretactiveMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\Pages\inventarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,6 +285,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\Pages\RunnersRezPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\RunnersSponsors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -346,6 +392,13 @@
       <DependentUpon>MaraphonModel.edmx</DependentUpon>
       <LastGenOutput>MaraphonModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\photo.png" />
+    <Resource Include="Resources\map-icon-drinks.png" />
+    <Resource Include="Resources\map-icon-energy-bars.png" />
+    <Resource Include="Resources\map-icon-information.png" />
+    <Resource Include="Resources\map-icon-medical.png" />
+    <Resource Include="Resources\map-icon-start.png" />
+    <Resource Include="Resources\map-icon-toilets.png" />
     <Resource Include="Resources\worm.jpg" />
     <Resource Include="Resources\slug.jpg" />
     <Resource Include="Resources\sloth.jpg" />

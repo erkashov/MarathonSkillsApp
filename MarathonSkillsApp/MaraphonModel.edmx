@@ -177,7 +177,7 @@
           <Key>
             <PropertyRef Name="VolunteerId" />
           </Key>
-          <Property Name="VolunteerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VolunteerId" Type="int" Nullable="false" StoreGeneratedPattern="None" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="80" />
           <Property Name="LastName" Type="nvarchar" MaxLength="80" />
           <Property Name="CountryCode" Type="nchar" MaxLength="3" Nullable="false" />
@@ -694,7 +694,7 @@
           <Key>
             <PropertyRef Name="VolunteerId" />
           </Key>
-          <Property Name="VolunteerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VolunteerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="FirstName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
           <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />

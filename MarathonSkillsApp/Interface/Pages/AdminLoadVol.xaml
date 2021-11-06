@@ -1,0 +1,43 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.AdminLoadVol"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminLoadVol">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Загрузка волонтеров" Style="{DynamicResource Title}"></TextBlock>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="CSV файл волонтеров: " Style="{DynamicResource mainText}" HorizontalAlignment="Left"></TextBlock>
+            <TextBox x:Name="TbPath" Style="{DynamicResource placeHolder}" Tag="volonters.csv" Text="{Binding CharityLogo}"></TextBox>
+            <Button x:Name="BtCSV" Content="Просмотр..." Margin="0" Click="BtCSV_Click"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="BtLoad" Content="Загрузить" Click="BtSave_Click" Margin="5"></Button>
+            <Button x:Name="BtCancel" Content="Отмена" Click="BtCancel_Click" Margin="5"></Button>
+        </StackPanel>
+
+        <TextBlock Grid.Row="3" Style="{DynamicResource mainText}" HorizontalAlignment="Center" x:Name="TbStatus"></TextBlock>
+        <TextBlock Grid.Row="4" Style="{DynamicResource mainText}" HorizontalAlignment="Center" TextAlignment="Center" x:Name="TbPolya" Visibility="Hidden"> 
+            VolunteerId : уникальный идентификатор волонтера<LineBreak></LineBreak>
+            FirstName : Фамилия<LineBreak></LineBreak>
+            LastName : Имя<LineBreak></LineBreak>
+            CountryCode : Код страны<LineBreak></LineBreak>
+            Gender : Пол(F - женский, M - мужкой)<LineBreak></LineBreak>
+
+        </TextBlock>
+    </Grid>
+</Page>

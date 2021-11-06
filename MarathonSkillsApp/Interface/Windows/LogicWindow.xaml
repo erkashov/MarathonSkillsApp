@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarathonSkillsApp.Interface" xmlns:componentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
         mc:Ignorable="d"
-        Title="" Height="700" Width="850" MinHeight="500" MinWidth="600">
+        Title="Marathon Skills" Height="700" Width="850" MinHeight="500" MinWidth="600">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="MyBoolToVisibilityConverter" />
     </Window.Resources>
@@ -27,7 +27,7 @@
 
         <Frame Grid.Row="1" x:Name="LogicFrame" NavigationUIVisibility="Hidden"></Frame>
 
-        <Grid Grid.Row="2" Background="#FF505050">
+        <Grid Grid.Row="2" Background="#FF505050" x:Name="TimerGrid">
             <TextBlock x:Name="timer" Text=" до старта марафона" FontSize="20" Foreground="White" VerticalAlignment="Center"  HorizontalAlignment="Center" TextAlignment="Center"/>
         </Grid>
     </Grid>
