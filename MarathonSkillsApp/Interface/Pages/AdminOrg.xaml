@@ -1,0 +1,79 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.AdminOrg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminOrg">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Управление благотворительными организациями" Style="{DynamicResource Title}"></TextBlock>
+        <Button x:Name="BtAddOrg" Content="+ Добавить новую" Grid.Row="1" HorizontalAlignment="Left" Margin="5"></Button>
+
+        <DataGrid x:Name="DgOrgs" Grid.Row="2" AutoGenerateColumns="False" Background="#FFB4B4B4" AlternatingRowBackground="#FFD6D6D6" Margin="25" IsReadOnly="False" CanUserAddRows="False" CanUserDeleteRows="False" >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF505054"></Setter>
+                    <Setter Property="Padding" Value="10"></Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="1*">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Лого" Style="{DynamicResource Title2}" Foreground="#FF343434"></TextBlock>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Ellipse Width="150" Height="100" HorizontalAlignment="Center">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="{Binding ImageSource}"></ImageBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="2*">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Наименование" Style="{DynamicResource Title2}" Foreground="#FF343434" HorizontalAlignment="Left"></TextBlock>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding CharityName}" Style="{DynamicResource mainText}" HorizontalAlignment="Left" ></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Width="4*" >
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Описание" Style="{DynamicResource Title2}" Foreground="#FF343434" HorizontalAlignment="Left"></TextBlock>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock TextWrapping="Wrap" MaxWidth="500" Text="{Binding CharityDescription}" Style="{DynamicResource mainText}" HorizontalAlignment="Left"></TextBlock>
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTemplateColumn  Width="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="BtEditOrg" Content="Редактировать" Margin="5" Height="70" Width="200" Click="BtEditOrg_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

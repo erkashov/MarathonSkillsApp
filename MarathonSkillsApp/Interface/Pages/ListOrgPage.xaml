@@ -33,7 +33,7 @@
 
                         <Ellipse Width="150" Height="150"  Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
                             <Ellipse.Fill>
-                                <ImageBrush Stretch="Fill" ImageSource="{Binding Logo}"/>
+                                <ImageBrush Stretch="Fill" ImageSource="{Binding ImageSource}"/>
                                 
                             </Ellipse.Fill>
                         </Ellipse>

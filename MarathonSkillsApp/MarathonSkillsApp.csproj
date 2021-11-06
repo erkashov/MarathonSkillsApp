@@ -100,6 +100,9 @@
     <Compile Include="Gender.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Pages\AdminOrg.xaml.cs">
+      <DependentUpon>AdminOrg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Pages\ConfirmRegOnMarPage.xaml.cs">
       <DependentUpon>ConfirmRegOnMarPage.xaml</DependentUpon>
     </Compile>
@@ -210,6 +213,10 @@
     <Compile Include="Volunteer.cs">
       <DependentUpon>MaraphonModel.tt</DependentUpon>
     </Compile>
+    <Page Include="Interface\Pages\AdminOrg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\Pages\ConfirmRegOnMarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
