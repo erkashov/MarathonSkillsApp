@@ -16,9 +16,9 @@
         </Grid.RowDefinitions>
 
         <TextBlock Text="Управление благотворительными организациями" Style="{DynamicResource Title}"></TextBlock>
-        <Button x:Name="BtAddOrg" Content="+ Добавить новую" Grid.Row="1" HorizontalAlignment="Left" Margin="5"></Button>
+        <Button x:Name="BtAddOrg" Content="+ Добавить новую" Grid.Row="1" HorizontalAlignment="Left" Margin="5" Click="BtAddOrg_Click"></Button>
 
-        <DataGrid x:Name="DgOrgs" Grid.Row="2" AutoGenerateColumns="False" Background="#FFB4B4B4" AlternatingRowBackground="#FFD6D6D6" Margin="25" IsReadOnly="False" CanUserAddRows="False" CanUserDeleteRows="False" >
+        <DataGrid SelectionChanged="DgOrgs_SelectionChanged" x:Name="DgOrgs" Grid.Row="2" AutoGenerateColumns="False" Background="#FFB4B4B4" AlternatingRowBackground="#FFD6D6D6" Margin="25" IsReadOnly="False" CanUserAddRows="False" CanUserDeleteRows="False" >
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="#FF505054"></Setter>

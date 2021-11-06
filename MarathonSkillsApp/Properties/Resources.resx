@@ -181,6 +181,9 @@
   <data name="pair_of_havaianas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pair-of-havaianas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="querstadtein_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\querstadtein-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

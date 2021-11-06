@@ -1,0 +1,72 @@
+﻿<Page x:Class="MarathonSkillsApp.Interface.Pages.AddOrg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarathonSkillsApp.Interface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddOrg">
+
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Добавление благотворительной организации" Style="{DynamicResource Title}" x:Name="Title"></TextBlock>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Наименование:" Style="{DynamicResource mainText}"  HorizontalAlignment="Left"></TextBlock>
+                <TextBox Grid.Row="1" x:Name="TbName" Tag="Наименование" Style="{DynamicResource placeHolder}" Text="{Binding CharityName}"></TextBox>
+                <TextBlock Text="Описание:" Style="{DynamicResource mainText}"  HorizontalAlignment="Left" Grid.Row="2"></TextBlock>
+                <TextBox Grid.Row="3" x:Name="TbDescr" Tag="Описание" Style="{DynamicResource placeHolder}" Text="{Binding CharityDescription}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBox>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Оставьте поле логотип файл пустым, если вы не хотите загружать логотип" Style="{DynamicResource ButtonTextBlock}" Foreground="#FFB4B4B4" Background="{x:Null}" FontFamily="Arial" FontSize="18"></TextBlock>
+                <TextBlock Text="Логотип файл" Style="{DynamicResource mainText}" HorizontalAlignment="Left" Grid.Row="1"></TextBlock>
+                <StackPanel Orientation="Horizontal" Grid.Row="2">
+                    <TextBox x:Name="TbPath" Style="{DynamicResource placeHolder}" Tag="charity_logo.jpg" Text="{Binding CharityLogo}"></TextBox>
+                    <Button x:Name="BtPhoto" Content="Просмотр..." Margin="0" Click="BtPhoto_Click"></Button>
+                </StackPanel>
+                <TextBlock Text="Текущий логотип:" Style="{StaticResource mainText}" HorizontalAlignment="Left" Grid.Row="3"></TextBlock>
+                <Ellipse Grid.Row="4" Width="150" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Fill="#FFFFCA6D"></Ellipse>
+                <TextBlock Text="Logo" Style="{DynamicResource mainText}" Foreground="#FFFF6800" HorizontalAlignment="Left" Grid.Row="4" RenderTransformOrigin="1.352,0.554" Margin="52,62,0,70"></TextBlock>
+                <Ellipse Grid.Row="4" Width="150" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding ImageSource}"></ImageBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+            
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="BtSave" Content="Сохранить" Click="BtSave_Click" Margin="5"></Button>
+            <Button x:Name="BtCancel" Content="Отмена" Click="BtCancel_Click" Margin="5"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

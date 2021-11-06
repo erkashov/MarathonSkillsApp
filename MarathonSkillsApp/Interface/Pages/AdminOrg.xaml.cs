@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarathonSkillsApp.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,16 @@ namespace MarathonSkillsApp.Interface.Pages
         private void BtEditOrg_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void BtAddOrg_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.LogicFrame.Navigate(new AddOrg());
+        }
+
+        private void DgOrgs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Manager.LogicFrame.Navigate(new AddOrg(DgOrgs.SelectedItem as Charity));
         }
     }
 }

@@ -36,7 +36,7 @@ namespace MarathonSkillsApp
                 }
                 catch
                 {
-                    return new BitmapImage();
+                    return new BitmapImage(new Uri("pack://application:,,,/Resources/photo.png", UriKind.Absolute));
                 }
                 
             }
