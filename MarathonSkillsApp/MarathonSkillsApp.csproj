@@ -148,6 +148,9 @@
     <Compile Include="Interface\Pages\RunnersRezPage.xaml.cs">
       <DependentUpon>RunnersRezPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Pages\RunnersSponsors.xaml.cs">
+      <DependentUpon>RunnersSponsors.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Windows\LogicWindow.xaml.cs">
       <DependentUpon>LogicWindow.xaml</DependentUpon>
     </Compile>
@@ -282,6 +285,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\Pages\RunnersRezPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Pages\RunnersSponsors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

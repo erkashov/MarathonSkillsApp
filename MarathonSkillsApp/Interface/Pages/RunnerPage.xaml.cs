@@ -56,7 +56,7 @@ namespace MarathonSkillsApp.Interface.Pages
 
         private void BtSponcor_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            Manager.LogicFrame.Navigate(new RunnersSponsors());
 
         }
     }
